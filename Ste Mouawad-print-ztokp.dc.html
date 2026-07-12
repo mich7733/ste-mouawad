@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style data-omelette-print-defaults>
+@media print {
+  @page { margin: 0.5in; }
+  h1, h2, h3, h4, h5, h6 { break-after: avoid; }
+  figure, table, pre, blockquote, img, svg, tr, [class~="card" i] { break-inside: avoid; }
+  img, svg { max-width: 100%; }
+  p { orphans: 3; widows: 3; }
+}
+</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=Dancing+Script:wght@600;700&family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700;800&family=Aref+Ruqaa:wght@400;700&display=swap">
+<link rel="stylesheet" href="_ds/modernist-2380c6d5-0125-4329-9a8e-5f74083e9614/styles.css">
+<script src="_ds/modernist-2380c6d5-0125-4329-9a8e-5f74083e9614/_ds_bundle.js"></script>
+<script src="./image-slot.js"></script>
+<style>
+  body{margin:0;background:#f6f2ec}
+  a{color:inherit}
+  ::selection{background:rgba(168,50,31,.18)}
+</style>
+<script>
+(function(){
+  function vh(){return window.innerHeight;}
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      var el=e.target;
+      if(e.isIntersecting){el.style.opacity='1';el.style.transform='none';}
+      else{var r=el.getBoundingClientRect();el.style.opacity='0';el.style.transform=(r.top>0?'translateY(42px)':'translateY(-42px)');}
+    });
+  },{threshold:0.06,rootMargin:'0px 0px -9% 0px'});
+  function mark(el){
+    if(el.__rv)return;el.__rv=1;
+    el.style.transition='opacity .8s cubic-bezier(.22,.7,.2,1),transform .9s cubic-bezier(.22,.7,.2,1)';
+    var r=el.getBoundingClientRect();
+    if(!(r.top<vh()*0.9&&r.bottom>0)){el.style.opacity='0';el.style.transform='translateY(42px)';}
+    io.observe(el);
+  }
+  var ticking=false;
+  function para(){
+    ticking=false;
+    var y=window.pageYOffset||document.documentElement.scrollTop||0;
+    document.querySelectorAll('[data-parallax]').forEach(function(el){
+      var f=parseFloat(el.getAttribute('data-parallax'))||0.2;
+      el.style.transform='translateY('+(y*f)+'px) scale(1.15)';
+    });
+  }
+  function scan(){
+    var secs=[].slice.call(document.querySelectorAll('section'));
+    secs.forEach(function(s,i){if(i>0)mark(s);});
+    var f=document.querySelector('footer');if(f)mark(f);
+    para();
+  }
+  window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(para);}},{passive:true});
+  var mo=new MutationObserver(function(){scan();});
+  function start(){scan();mo.observe(document.body,{childList:true,subtree:true});}
+  if(document.readyState!=='loading')start();else document.addEventListener('DOMContentLoaded',start);
+})();
+</script>
+</helmet>
+
+<div style="{{ rootStyle }}">
+<div style="background:#f6f2ec;color:#2a2320;font-family:var(--font-body,'Source Serif 4',Georgia,serif);overflow-x:hidden">
+
+<template id="__bundler_thumbnail" data-bg-color="#1a1410">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#1a1410"></rect>
+    <polygon points="600,250 720,370 600,490 480,370" fill="#9c2b1c"></polygon>
+    <rect x="588" y="300" width="24" height="150" fill="#f6f2ec"></rect>
+    <rect x="558" y="340" width="84" height="22" fill="#f6f2ec"></rect>
+    <text x="600" y="590" text-anchor="middle" font-family="Georgia,serif" font-size="60" font-weight="700" fill="#f6f2ec" letter-spacing="6">STE. MOUAWAD</text>
+    <text x="600" y="640" text-anchor="middle" font-family="Georgia,serif" font-size="24" fill="#d9b877" letter-spacing="8">ENTREPRISE ARTISTIQUE</text>
+  </svg>
+</template>
+
+<!-- ============ HERO ============ -->
+<section style="position:relative;overflow:hidden;background:#1a1410;min-height:770px;display:flex;flex-direction:column">
+  <div data-parallax="0.22" style="position:absolute;inset:0;background:url(assets/hero.jpg) center 40%/cover;transform:scale(1.15);will-change:transform"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(var(--grad,90deg),rgba(16,11,8,.92),rgba(16,11,8,.6) 52%,rgba(16,11,8,.34));pointer-events:none"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(16,11,8,.72),transparent 46%);pointer-events:none"></div>
+
+  <!-- nav -->
+  <header style="position:relative;z-index:3;width:100%;max-width:1200px;margin:0 auto;padding:26px 34px;box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:24px">
+    <a href="#top" style="display:flex;align-items:center;text-decoration:none">
+      <img src="assets/logo-white.png" alt="STE. MOUAWAD — Entreprise Artistique" style="height:50px;width:auto;display:block"></img>
+    </a>
+    <div style="display:flex;align-items:center;gap:26px">
+      <nav style="display:flex;align-items:center;gap:24px;font-family:var(--font-nav,'Source Serif 4',serif);font-size:14px;letter-spacing:.02em;color:#efe6da">
+        <a href="#about" style="text-decoration:none" style-hover="color:#fff">{{ t.nav1 }}</a>
+        <a href="#featured" style="text-decoration:none" style-hover="color:#fff">{{ t.nav2 }}</a>
+        <a href="https://instagram.com/ste.mouawad" target="_blank" style="text-decoration:none" style-hover="color:#fff">{{ t.nav3 }}</a>
+        <a href="https://www.facebook.com/Ste.Mouawad/" target="_blank" style="text-decoration:none" style-hover="color:#fff">{{ t.nav4 }}</a>
+        <a href="#contact" style="text-decoration:none" style-hover="color:#fff">{{ t.nav5 }}</a>
+      </nav>
+      <button onClick="{{ toggleLang }}" style="background:transparent;border:1px solid rgba(240,232,220,.5);color:#f2ebe0;padding:7px 14px;font-family:'Cairo',sans-serif;font-size:12.5px;letter-spacing:.06em;cursor:pointer" style-hover="background:rgba(255,255,255,.12)">{{ langBtn }}</button>
+      <a href="https://wa.me/9613269710" target="_blank" style="display:inline-flex;align-items:center;gap:9px;background:var(--wine,#9c2b1c);color:#fff;text-decoration:none;padding:11px 18px;font-family:var(--font-nav,'Source Serif 4',serif);font-weight:600;font-size:12.5px;letter-spacing:.1em;text-transform:var(--upper,uppercase)" style-hover="background:#83231a">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.53.15-.17.2-.3.3-.5.1-.19.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.43 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42"></path></svg>
+        {{ t.waBtn }}
+      </a>
+    </div>
+  </header>
+
+  <!-- hero content -->
+  <div style="position:relative;z-index:2;width:100%;max-width:1200px;margin:0 auto;padding:64px 34px 76px;box-sizing:border-box;display:flex;flex-direction:column;align-items:flex-start;gap:22px;text-align:start;flex:1;justify-content:center">
+    <span style="font-family:var(--font-nav,'Source Serif 4',serif);font-size:13px;letter-spacing:.24em;text-transform:var(--upper,uppercase);color:#d9b877;font-weight:600">{{ t.heroKicker }}</span>
+    <h1 style="margin:0;font-family:var(--font-head,'Playfair Display',serif);font-weight:800;color:#fff;font-size:clamp(42px,5.4vw,66px);line-height:1.12;max-width:640px;letter-spacing:-.01em">{{ t.heroTitle }}</h1>
+    <p style="margin:0;max-width:440px;color:rgba(255,255,255,.86);font-size:18px;line-height:1.6">{{ t.heroSub }}</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:8px">
+      <a href="#featured" style="display:inline-flex;align-items:center;gap:10px;background:var(--wine,#9c2b1c);color:#fff;text-decoration:none;padding:16px 30px;font-family:var(--font-nav,'Source Serif 4',serif);font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:var(--upper,uppercase)" style-hover="background:#83231a">{{ t.heroCta1 }}</a>
+      <a href="https://wa.me/9613269710" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:rgba(20,14,10,.4);border:1px solid rgba(255,255,255,.5);color:#fff;text-decoration:none;padding:16px 26px;font-family:var(--font-nav,'Source Serif 4',serif);font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:var(--upper,uppercase)" style-hover="background:rgba(255,255,255,.14)">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.53.15-.17.2-.3.3-.5.1-.19.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.43 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42"></path></svg>
+        {{ t.heroCta2 }}
+      </a>
+    </div>
+    <div style="display:flex;gap:26px;margin-top:6px;font-family:var(--font-nav,'Source Serif 4',serif);font-size:13px;letter-spacing:.14em;text-transform:var(--upper,uppercase);color:#efe6da">
+      <a href="https://instagram.com/ste.mouawad" target="_blank" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none" style-hover="color:#fff">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"></circle></svg>
+        {{ t.igWord }}
+      </a>
+      <a href="https://www.facebook.com/Ste.Mouawad/" target="_blank" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none" style-hover="color:#fff">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12"></path></svg>
+        {{ t.fbWord }}
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" style="background:#f7f3ec;padding:88px 34px">
+  <div style="max-width:1120px;margin:0 auto;display:grid;grid-template-columns:0.95fr 1.05fr;gap:56px;align-items:center;direction:ltr">
+    <div style="position:relative;aspect-ratio:0.92;background:#e7ded2;overflow:hidden"><div style="position:absolute;inset:0"><image-slot id="about_img" shape="rect" placeholder="{{ t.phAbout }}"></image-slot></div></div>
+    <div style="direction:var(--textdir,ltr);text-align:var(--talign,left)">
+      <div style="font-family:var(--font-nav,'Source Serif 4',serif);font-size:13px;letter-spacing:.2em;text-transform:var(--upper,uppercase);color:var(--accent,#a8321f);font-weight:700;margin-bottom:16px">{{ t.aboutKicker }}</div>
+      <h2 style="margin:0 0 24px;font-family:var(--font-head,'Playfair Display',serif);font-weight:700;font-size:clamp(30px,3.6vw,46px);line-height:1.14;color:#241d18">{{ t.aboutTitle }}</h2>
+      <p style="margin:0 0 18px;font-size:18px;line-height:1.7;color:#4a3f37">{{ t.aboutP1 }}</p>
+      <p style="margin:0 0 26px;font-size:18px;line-height:1.7;color:#4a3f37">{{ t.aboutP2 }}</p>
+      <div style="font-family:var(--font-sig,'Dancing Script',cursive);font-size:34px;color:#241d18;line-height:1">{{ t.aboutSig }}</div>
+      <div style="width:90px;height:2px;background:var(--accent,#a8321f);margin-top:8px;margin-inline-start:0"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED PROJECTS ============ -->
+<section id="featured" style="background:#f1ece2;padding:80px 34px;border-top:1px solid rgba(0,0,0,.07)">
+  <div style="max-width:760px;margin:0 auto 34px;display:flex;align-items:center;gap:26px">
+    <span style="flex:1;height:2px;background:rgba(0,0,0,.14)"></span>
+    <h2 style="margin:0;white-space:nowrap;font-family:var(--font-body,'Source Serif 4',serif);font-weight:700;font-size:16px;letter-spacing:.2em;text-transform:var(--upper,uppercase);color:var(--accent,#a8321f)">{{ t.featTitle }}</h2>
+    <span style="flex:1;height:2px;background:rgba(0,0,0,.14)"></span>
+  </div>
+  <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:6px;margin-bottom:30px">
+    <sc-for list="{{ filters }}" as="f" hint-placeholder-count="5">
+      <button onClick="{{ f.onClick }}" style="{{ f.style }}" style-hover="opacity:.85">{{ f.label }}</button>
+    </sc-for>
+  </div>
+  <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:5px">
+    <sc-for list="{{ projects }}" as="p" hint-placeholder-count="4">
+      <div style="{{ p.wrapStyle }}">
+        <div style="position:absolute;inset:0"><image-slot id="{{ p.id }}" shape="rect" placeholder="{{ p.label }}"></image-slot></div>
+        <div style="position:absolute;left:0;right:0;bottom:0;padding:32px 16px 14px;background:linear-gradient(0deg,rgba(20,14,10,.78),transparent);pointer-events:none;font-family:var(--font-nav,'Source Serif 4',serif);font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:var(--upper,uppercase);color:#fff;text-align:start">{{ p.label }}</div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="display:flex;justify-content:center;margin-top:32px">
+    <a href="https://instagram.com/ste.mouawad" target="_blank" style="background:var(--wine,#9c2b1c);color:#fff;text-decoration:none;padding:15px 30px;font-family:var(--font-nav,'Source Serif 4',serif);font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:var(--upper,uppercase)" style-hover="background:#83231a">{{ t.featMore }}</a>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section style="background:#f7f3ec;padding:76px 34px">
+  <div style="max-width:640px;margin:0 auto 44px;display:flex;align-items:center;gap:26px">
+    <span style="flex:1;height:2px;background:rgba(0,0,0,.14)"></span>
+    <h2 style="margin:0;white-space:nowrap;font-family:var(--font-body,'Source Serif 4',serif);font-weight:700;font-size:16px;letter-spacing:.2em;text-transform:var(--upper,uppercase);color:var(--accent,#a8321f)">{{ t.procTitle }}</h2>
+    <span style="flex:1;height:2px;background:rgba(0,0,0,.14)"></span>
+  </div>
+  <div style="max-width:1060px;margin:0 auto;display:flex;align-items:flex-start;justify-content:center;flex-wrap:wrap;gap:6px">
+    <div style="display:flex;flex-direction:column;align-items:center;gap:14px;width:150px;text-align:center">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent,#a8321f)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21.17 6.81a1 1 0 0 0-3.98-3.98L3.84 16.17a2 2 0 0 0-.5.83l-1.32 4.35a.5.5 0 0 0 .62.62l4.35-1.32a2 2 0 0 0 .83-.5z"></path><path d="m15 5 4 4"></path></svg>
+      <span style="font-family:var(--font-nav,'Source Serif 4',serif);font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:var(--upper,uppercase);color:#4a3f37">{{ t.proc1 }}</span>
+    </div>
+    <div style="color:var(--accent,#a8321f);align-self:center;transform:var(--arrow-flip,none)"><svg width="30" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:14px;width:150px;text-align:center">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent,#a8321f)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v16h16"></path><path d="M4 4 20 20"></path><path d="M4 11h4M4 8h2"></path></svg>
+      <span style="font-family:var(--font-nav,'Source Serif 4',serif);font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:var(--upper,uppercase);color:#4a3f37">{{ t.proc2 }}</span>
+    </div>
+    <div style="color:var(--accent,#a8321f);align-self:center;transform:var(--arrow-flip,none)"><svg width="30" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:14px;width:150px;text-align:center">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent,#a8321f)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="13" width="7" height="6" rx="1"></rect><rect x="13.5" y="13" width="7" height="6" rx="1"></rect><rect x="8.5" y="5" width="7" height="6" rx="1"></rect></svg>
+      <span style="font-family:var(--font-nav,'Source Serif 4',serif);font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:var(--upper,uppercase);color:#4a3f37">{{ t.proc3 }}</span>
+    </div>
+    <div style="color:var(--accent,#a8321f);align-self:center;transform:var(--arrow-flip,none)"><svg width="30" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:14px;width:150px;text-align:center">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent,#a8321f)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m15 12-8.37 8.37a1 1 0 1 1-3-3L12 9"></path><path d="m18 15 4-4"></path><path d="m21.5 11.5-1.91-1.91A2 2 0 0 1 19 8.17V7l-2.26-2.26a6 6 0 0 0-4.2-1.76L9 2.96l.92.82A6.18 6.18 0 0 1 12 8.4V10l2 2h1.17a2 2 0 0 1 1.41.59L18.5 14.5"></path></svg>
+      <span style="font-family:var(--font-nav,'Source Serif 4',serif);font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:var(--upper,uppercase);color:#4a3f37">{{ t.proc4 }}</span>
+    </div>
+    <div style="color:var(--accent,#a8321f);align-self:center;transform:var(--arrow-flip,none)"><svg width="30" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:14px;width:150px;text-align:center">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent,#a8321f)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 9h4"></path><path d="M12 7v5"></path><path d="M14 22v-4a2 2 0 0 0-4 0v4"></path><path d="M18 22V5.62a1 1 0 0 0-.55-.89l-4.55-2.28a2 2 0 0 0-1.79 0L6.55 4.72A1 1 0 0 0 6 5.62V22"></path><path d="m18 7 3.45 1.72a1 1 0 0 1 .55.9V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9.62a1 1 0 0 1 .55-.9L6 7"></path></svg>
+      <span style="font-family:var(--font-nav,'Source Serif 4',serif);font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:var(--upper,uppercase);color:#4a3f37">{{ t.proc5 }}</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSTAGRAM ============ -->
+<section style="background:#efe8dc;padding:64px 34px">
+  <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.7fr 1fr;gap:44px;align-items:center">
+    <div style="text-align:start">
+      <h2 style="margin:0 0 14px;font-family:var(--font-head,'Playfair Display',serif);font-weight:700;font-size:clamp(24px,2.4vw,30px);line-height:1.15;color:#241d18;text-transform:var(--upper,uppercase)">{{ t.igTitle }}</h2>
+      <p style="margin:0 0 22px;font-size:15px;line-height:1.6;color:#5a4e44">{{ t.igCopy }}</p>
+      <a href="https://instagram.com/ste.mouawad" target="_blank" style="display:inline-flex;align-items:center;gap:9px;background:var(--wine,#9c2b1c);color:#fff;text-decoration:none;padding:12px 20px;font-family:var(--font-nav,'Source Serif 4',serif);font-weight:600;font-size:12px;letter-spacing:.1em;text-transform:var(--upper,uppercase)" style-hover="background:#83231a">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"></circle></svg>
+        {{ t.igBtn }}
+      </a>
+    </div>
+    <a href="https://instagram.com/ste.mouawad" target="_blank" style="text-decoration:none;border:1px solid rgba(0,0,0,.14);padding:26px 18px;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;color:#241d18" style-hover="background:rgba(0,0,0,.03)">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="2.5" width="19" height="19" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"></circle></svg>
+      <span style="font-family:var(--font-nav,'Source Serif 4',serif);font-weight:600;font-size:14px">{{ t.igHandle }}</span>
+      <span style="font-size:12px;color:#6b5d52">{{ t.igFollow }}</span>
+      <span style="color:var(--accent,#a8321f);transform:var(--arrow-flip,none);margin-top:2px"><svg width="26" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+    </a>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section style="position:relative;overflow:hidden;padding:52px 34px;background:linear-gradient(105deg,#ece7de,#f6f3ee)">
+  <div style="position:relative;z-index:2;max-width:1120px;margin:0 auto;display:flex;align-items:stretch;justify-content:space-between;flex-wrap:wrap;gap:0">
+    <div style="flex:1;min-width:180px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;padding:6px 26px">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent,#a8321f)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="1"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg>
+      <span style="font-family:var(--font-head,'Playfair Display',serif);font-weight:700;font-size:23px;color:#241d18;line-height:1.1;white-space:nowrap">{{ t.stat1v }}</span>
+      <span style="font-size:12.5px;color:#6b5d52">{{ t.stat1s }}</span>
+    </div>
+    <div style="width:1px;background:rgba(0,0,0,.16);align-self:stretch;margin:6px 0"></div>
+    <div style="flex:1;min-width:180px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;padding:6px 26px">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent,#a8321f)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 9h4"></path><path d="M12 7v5"></path><path d="M14 22v-4a2 2 0 0 0-4 0v4"></path><path d="M18 22V5.62a1 1 0 0 0-.55-.89l-4.55-2.28a2 2 0 0 0-1.79 0L6.55 4.72A1 1 0 0 0 6 5.62V22"></path><path d="m18 7 3.45 1.72a1 1 0 0 1 .55.9V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9.62a1 1 0 0 1 .55-.9L6 7"></path></svg>
+      <span style="font-family:var(--font-head,'Playfair Display',serif);font-weight:700;font-size:23px;color:#241d18;line-height:1.1">{{ t.stat2v }}</span>
+      <span style="font-size:12.5px;color:#6b5d52">{{ t.stat2s }}</span>
+    </div>
+    <div style="width:1px;background:rgba(0,0,0,.16);align-self:stretch;margin:6px 0"></div>
+    <div style="flex:1;min-width:180px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;padding:6px 26px">
+      <div style="width:30px;height:36px;background:var(--accent,#a8321f);-webkit-mask:url(assets/lebanon-mask.png) center/contain no-repeat;mask:url(assets/lebanon-mask.png) center/contain no-repeat"></div>
+      <span style="font-family:var(--font-head,'Playfair Display',serif);font-weight:700;font-size:23px;color:#241d18;line-height:1.1">{{ t.stat3v }}</span>
+      <span style="font-size:12.5px;color:#6b5d52">{{ t.stat3s }}</span>
+    </div>
+    <div style="width:1px;background:rgba(0,0,0,.16);align-self:stretch;margin:6px 0"></div>
+    <div style="flex:1;min-width:180px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;padding:6px 26px">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent,#a8321f)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9Z"></path><path d="M11 3 8 9l4 13 4-13-3-6"></path><path d="M2 9h20"></path></svg>
+      <span style="font-family:var(--font-head,'Playfair Display',serif);font-weight:700;font-size:23px;color:#241d18;line-height:1.1">{{ t.stat4v }}</span>
+      <span style="font-size:12.5px;color:#6b5d52">{{ t.stat4s }}</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section id="contact" style="position:relative;overflow:hidden;background:#241d18;color:#f3ece2">
+  <div style="position:relative;z-index:2;max-width:760px;margin:0 auto;padding:84px 34px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:20px">
+    <h2 style="margin:0;font-family:var(--font-head,'Playfair Display',serif);font-weight:700;font-size:clamp(28px,3.6vw,44px);line-height:1.15;color:#fff;text-transform:var(--upper,uppercase);letter-spacing:.01em">{{ t.ctaTitle }}</h2>
+    <p style="margin:0;max-width:600px;font-size:17px;line-height:1.65;color:rgba(255,255,255,.82)">{{ t.ctaCopy }}</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:8px">
+      <a href="https://wa.me/9613269710" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:var(--wine,#9c2b1c);color:#fff;text-decoration:none;padding:15px 26px;font-family:var(--font-nav,'Source Serif 4',serif);font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:var(--upper,uppercase)" style-hover="background:#83231a">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.53.15-.17.2-.3.3-.5.1-.19.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.43 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42"></path></svg>
+        {{ t.waBtn }}
+      </a>
+      <a href="https://instagram.com/ste.mouawad" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:transparent;border:1px solid rgba(255,255,255,.45);color:#fff;text-decoration:none;padding:15px 24px;font-family:var(--font-nav,'Source Serif 4',serif);font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:var(--upper,uppercase)" style-hover="background:rgba(255,255,255,.12)">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"></circle></svg>
+        {{ t.igWord }}
+      </a>
+      <a href="https://www.facebook.com/Ste.Mouawad/" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:transparent;border:1px solid rgba(255,255,255,.45);color:#fff;text-decoration:none;padding:15px 24px;font-family:var(--font-nav,'Source Serif 4',serif);font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:var(--upper,uppercase)" style-hover="background:rgba(255,255,255,.12)">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12"></path></svg>
+        {{ t.fbWord }}
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer style="background:#1c1611;color:rgba(243,236,226,.62);padding:18px 34px;font-family:var(--font-nav,'Source Serif 4',serif);font-size:12.5px">
+  <div style="max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+    <span>{{ t.footCopy }}</span>
+    <span style="display:inline-flex;align-items:center;gap:8px">{{ t.footRight }} 🇱🇧</span>
+  </div>
+</footer>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:900},&quot;startLanguage&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;en&quot;,&quot;ar&quot;],&quot;default&quot;:&quot;en&quot;,&quot;tsType&quot;:&quot;'en'|'ar'&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;redAccent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#a8321f&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Theme&quot;},&quot;goldAccent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#b0873f&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Theme&quot;},&quot;primaryColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#9c2b1c&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Theme&quot;}}">
+class Component extends DCLogic {
+  state = { lang: (this.props.startLanguage || 'en'), filter: 'all' };
+
+  renderVals() {
+    const isAr = this.state.lang === 'ar';
+    const red = this.props.redAccent || '#a8321f';
+    const gold = this.props.goldAccent || '#b0873f';
+    const wine = this.props.primaryColor || '#9c2b1c';
+    const accent = isAr ? gold : red;
+
+    const en = {
+      brandName: 'STE. MOUAWAD', brandSub: 'Entreprise Artistique', brandSince: 'Since 1967',
+      nav1: 'Our Story', nav2: 'Projects', nav3: 'Instagram', nav4: 'Facebook', nav5: 'Contact',
+      waBtn: 'WhatsApp Us', langBtn: 'عربي',
+      heroKicker: 'More than five decades of craft',
+      heroTitle: 'Crafting Sacred Spaces Since 1967',
+      heroSub: 'From design to execution, transforming natural stone into timeless works of art.',
+      heroCta1: 'View Our Work', heroCta2: 'WhatsApp Us', igWord: 'Instagram', fbWord: 'Facebook',
+      aboutKicker: 'A Legacy of Faith & Artistry',
+      aboutTitle: 'A Family Legacy in Stone',
+      aboutP1: 'Since 1967, STE. MOUAWAD has specialized in churches, altars, sculptures, fireplaces, and custom marble creations throughout Lebanon and beyond.',
+      aboutP2: 'Every project combines artistic vision, technical expertise, and generations of craftsmanship.',
+      aboutSig: 'Ste. Mouawad',
+      featTitle: 'Featured Projects', featMore: 'View More Projects',
+      filter_all: 'All', filter_churches: 'Churches', filter_altars: 'Altars & Choirs', filter_sculptures: 'Sculptures', filter_fireplaces: 'Fireplaces',
+      procTitle: 'From Design to Execution',
+      proc1: 'Design', proc2: 'Technical Drawings', proc3: 'Stone Selection', proc4: 'Craftsmanship', proc5: 'Installation',
+      igTitle: 'Follow Our Latest Work',
+      igCopy: 'Discover our recent projects, craftsmanship and behind-the-scenes moments.',
+      igBtn: 'View Instagram', igHandle: '@ste.mouawad', igFollow: 'Follow on Instagram',
+      stat1k: 'Since', stat1v: 'Since 1967', stat1s: 'Over 55 years of excellence',
+      stat2v: 'Hundreds', stat2s: 'Of completed projects',
+      stat3v: 'Across Lebanon', stat3s: 'And beyond',
+      stat4v: 'Generations', stat4s: 'Of craftsmanship',
+      ctaTitle: "Let's Create Something Timeless",
+      ctaCopy: "Whether you're restoring a church, designing a custom fireplace, or bringing a unique artistic vision to life, we're ready to help.",
+      footCopy: '© 2024 STE. MOUAWAD. All Rights Reserved.', footRight: 'Handcrafted in Lebanon',
+      phHero: 'Drop a church interior photo', phAbout: 'Drop a craftsman photo', phMarble: 'Marble texture', phCol: 'Carved column', phIg: 'Photo'
+    };
+    const ar = {
+      brandName: 'شركة معوض', brandSub: 'للأعمال الفنية', brandSince: 'منذ 1967',
+      nav1: 'من نحن', nav2: 'أعمالنا', nav3: 'انستغرام', nav4: 'فيسبوك', nav5: 'تواصل معنا',
+      waBtn: 'تواصل عبر واتساب', langBtn: 'EN',
+      heroKicker: 'نحو أكثر من خمسة عقود من الإبداع',
+      heroTitle: 'نحوّل الحجر إلى تحف فنية تخلّد الإيمان',
+      heroSub: 'من التصميم إلى التنفيذ، نحوّل الحجر الطبيعي إلى أعمال فنية خالدة منذ عام ١٩٦٧',
+      heroCta1: 'استكشف أعمالنا', heroCta2: 'تواصل عبر واتساب', igWord: 'انستغرام', fbWord: 'فيسبوك',
+      aboutKicker: 'إرث عائلي من الإيمان والفن',
+      aboutTitle: 'حكاية عائلة صنعت التاريخ بالحجر',
+      aboutP1: 'منذ عام ١٩٦٧، تتخصص شركة معوض في تصميم وتنفيذ الكنائس، المذابح، المنحوتات، المواقد، والأعمال الرخامية المخصصة في لبنان وخارجه.',
+      aboutP2: 'كل مشروع هو مزيج من الرؤية الفنية، الخبرة التقنية، والحرفية المتوارثة عبر الأجيال.',
+      aboutSig: 'ستـ. معوض',
+      featTitle: 'نماذج من أعمالنا', featMore: 'عرض المزيد من الأعمال',
+      filter_all: 'الكل', filter_churches: 'الكنائس', filter_altars: 'المذابح', filter_sculptures: 'المنحوتات', filter_fireplaces: 'المواقد والديكورات',
+      procTitle: 'من الفكرة إلى التنفيذ',
+      proc1: 'التصميم', proc2: 'الرسومات التنفيذية', proc3: 'اختيار الحجر', proc4: 'الحرفية اليدوية', proc5: 'التركيب في الموقع',
+      igTitle: 'تابعوا أحدث أعمالنا',
+      igCopy: 'لحظات من الورشة، تفاصيل فنية، ومشاريع نعتز بتنفيذها.',
+      igBtn: 'زيارة انستغرام', igHandle: '@ste.mouawad', igFollow: 'تابعونا على انستغرام',
+      stat1k: 'منذ', stat1v: 'منذ ١٩٦٧', stat1s: '',
+      stat2v: 'مئات المشاريع المنجزة', stat2s: '',
+      stat3v: 'في مختلف أنحاء لبنان وخارجه', stat3s: '',
+      stat4v: 'حرفية متوارثة عبر الأجيال', stat4s: '',
+      ctaTitle: 'لنصنع معاً شيئاً خالداً',
+      ctaCopy: 'سواء كنتم بصدد ترميم كنيسة، تصميم مدفأة فريدة، أو تنفيذ رؤية فنية خاصة، فريقنا جاهز لتحويل فكرتكم إلى عمل فني يدوم عبر الزمن.',
+      footCopy: 'جميع الحقوق محفوظة © شركة معوض للأعمال الفنية', footRight: 'صنع بحرفة في لبنان',
+      phHero: 'أضف صورة كنيسة', phAbout: 'أضف صورة الحرفي', phMarble: 'خلفية رخامية', phCol: 'عمود منحوت', phIg: 'صورة'
+    };
+    const t = isAr ? ar : en;
+
+    const rootStyle = {
+      direction: isAr ? 'rtl' : 'ltr',
+      '--accent': accent,
+      '--wine': wine,
+      '--font-head': isAr ? "'Amiri', serif" : "'Playfair Display', Georgia, serif",
+      '--font-body': isAr ? "'Cairo', sans-serif" : "'Source Serif 4', Georgia, serif",
+      '--font-sig': isAr ? "'Aref Ruqaa', serif" : "'Dancing Script', cursive",
+      '--font-nav': isAr ? "'Cairo', sans-serif" : "'Source Serif 4', Georgia, serif",
+      '--arrow-flip': isAr ? 'scaleX(-1)' : 'none',
+      '--upper': isAr ? 'none' : 'uppercase',
+      '--textdir': isAr ? 'rtl' : 'ltr',
+      '--talign': isAr ? 'right' : 'left',
+      '--grad': isAr ? '270deg' : '90deg'
+    };
+
+    const catCounts = { churches: 3, altars: 1, sculptures: 2, fireplaces: 3 };
+    const filter = this.state.filter;
+    const projects = [];
+    ['churches', 'altars', 'sculptures', 'fireplaces'].forEach(c => {
+      for (let i = 1; i <= catCounts[c]; i++) {
+        const show = filter === 'all' || filter === c;
+        projects.push({
+          id: 'proj_' + c + '_' + i,
+          label: t['filter_' + c],
+          wrapStyle: {
+            position: 'relative', overflow: 'hidden', aspectRatio: '0.82',
+            background: '#e2d8ca', display: show ? 'block' : 'none'
+          }
+        });
+      }
+    });
+
+    const filters = ['all', 'churches', 'altars', 'sculptures', 'fireplaces'].map(k => {
+      const active = filter === k;
+      return {
+        key: k, label: t['filter_' + k],
+        onClick: () => this.setState({ filter: k }),
+        style: {
+          padding: '11px 20px', border: 'none', cursor: 'pointer',
+          fontFamily: isAr ? "'Cairo', sans-serif" : "'Source Serif 4', Georgia, serif",
+          fontSize: '12.5px', fontWeight: 700,
+          letterSpacing: isAr ? '0' : '.11em',
+          textTransform: isAr ? 'none' : 'uppercase',
+          background: active ? wine : 'transparent',
+          color: active ? '#fff' : '#6f6152'
+        }
+      };
+    });
+
+    const igTiles = [1, 2, 3, 4, 5].map(i => ({ id: 'ig_' + i, ph: t.phIg }));
+
+    return {
+      t, rootStyle, projects, filters, igTiles,
+      langBtn: t.langBtn,
+      toggleLang: () => this.setState(s => ({ lang: s.lang === 'ar' ? 'en' : 'ar' }))
+    };
+  }
+}
+</script>
+<script>
+(async () => {
+  if (!document.title || !document.title.trim()) document.title = "Ste Mouawad";
+  // Prepend so page-supplied @page / break rules (deck-stage's margin:0,
+  // author CSS) keep source-order precedence over the baseline.
+  const baseCss = document.createElement('style');
+  baseCss.textContent = "@media print {\n  figure, table { break-inside: avoid; }\n  *, *::before, *::after {\n    print-color-adjust: exact; -webkit-print-color-adjust: exact;\n    backdrop-filter: none !important; -webkit-backdrop-filter: none !important;\n    animation-delay: -99s !important; animation-duration: .001s !important;\n    animation-iteration-count: 1 !important; animation-fill-mode: both !important;\n    animation-play-state: running !important; transition-duration: 0s !important;\n  }\n}";
+  document.head.prepend(baseCss);
+  if (document.readyState === 'loading') {
+    await new Promise((r) => document.addEventListener('DOMContentLoaded', r, { once: true }));
+  }
+  let ds = document.querySelector('deck-stage');
+  // whenDefined never resolves when nothing registers the element, so only
+  // await it when a <deck-stage> tag exists (and race a timeout regardless).
+  if (ds && !customElements.get('deck-stage')) {
+    try {
+      await Promise.race([
+        customElements.whenDefined('deck-stage'),
+        new Promise((r) => setTimeout(r, 3000)),
+      ]);
+    } catch (e) {}
+    ds = document.querySelector('deck-stage');
+  }
+  // dc-runtime assigns window.DCLogic at init and mounts into #dc-root on
+  // DOMContentLoaded; settle on that subtree so React has rendered before
+  // print(). Non-DC pages fall through to weighing body.
+  const isDc = !ds && 'DCLogic' in window;
+  const settleRoot = ds || (isDc ? document.getElementById('dc-root') : null) || document.body;
+  if (settleRoot) {
+    // Weigh only content children — skip script/style/template so inline
+    // Babel/CSS doesn't register as stable "content" before the framework
+    // has mounted anything.
+    const MEDIA = 'img,svg,canvas,video,picture,iframe,embed,object';
+    const weigh = () => {
+      let text = 0, media = 0;
+      for (const c of settleRoot.children) {
+        const t = c.tagName;
+        if (t === 'SCRIPT' || t === 'STYLE' || t === 'TEMPLATE') continue;
+        text += (c.textContent || '').trim().length;
+        media += c.querySelectorAll(MEDIA).length + (c.matches(MEDIA) ? 1 : 0);
+      }
+      return text + media * 100;
+    };
+    // "Non-zero and stable" alone is not sufficient to mean rendered: generic
+    // body can carry a static shell while async main content is pending, and
+    // #dc-root can carry the root DC's static text while child refs are still
+    // .sc-placeholder boxes. Gate generic on readyState 'complete', and never
+    // accept stability while a dc-runtime placeholder is present.
+    const isGeneric = settleRoot === document.body;
+    const deadline = Date.now() + 15000;
+    let last = -1, stable = 0;
+    while (Date.now() < deadline) {
+      const n = weigh();
+      const ready =
+        (!isGeneric || document.readyState === 'complete') &&
+        !settleRoot.querySelector('.sc-placeholder');
+      if (n > 0 && n === last && ready) { if (++stable >= 2) break; } else { stable = 0; }
+      last = n;
+      await new Promise((r) => setTimeout(r, 250));
+    }
+  }
+  // Project support.js may predate runtime default-seeding; push via bridge.
+  if (isDc && window.__dcSetProps && window.__dcRootName) {
+    try {
+      const dpEl = document.querySelector('script[data-dc-script]');
+      const meta = JSON.parse((dpEl && dpEl.getAttribute('data-props')) || '{}');
+      const bag = {};
+      for (const k in meta)
+        if (k[0] !== '$' && meta[k] && meta[k].default !== undefined)
+          bag[k] = meta[k].default;
+      if (Object.keys(bag).length) {
+        window.__dcSetProps(window.__dcRootName(), bag);
+        await new Promise((r) => setTimeout(r, 50));
+      }
+    } catch (e) {}
+  }
+  // Reveal content gated on scroll or visibility before printing. Lazy <img>,
+  // IntersectionObserver fade-ins, and collapsed <details> don't render while
+  // off-screen, so a long page would print with them blank or closed. Open
+  // every <details>, force native-lazy images eager, and scroll the document
+  // through its full height to trip lazy-load + IO; then wait (bounded) for the
+  // newly-triggered images. Inert for deck-stage (slides aren't scroll-gated).
+  try {
+    for (const d of document.querySelectorAll('details')) d.open = true;
+    for (const img of document.querySelectorAll('img[loading="lazy"]'))
+      img.loading = 'eager';
+    const scroller = document.scrollingElement || document.documentElement;
+    const full = Math.max(scroller.scrollHeight, document.body.scrollHeight);
+    const step = window.innerHeight || 800;
+    for (let y = 0; y <= full; y += step) {
+      window.scrollTo(0, y);
+      await new Promise((r) => requestAnimationFrame(r));
+    }
+    window.scrollTo(0, 0);
+    await Promise.race([
+      Promise.all(
+        [...document.images].map((img) =>
+          img.complete
+            ? null
+            : new Promise((res) => {
+                img.addEventListener('load', res, { once: true });
+                img.addEventListener('error', res, { once: true });
+              })
+        )
+      ),
+      new Promise((r) => setTimeout(r, 4000)),
+    ]);
+  } catch (e) {}
+  try { await document.fonts.ready; } catch (e) {}
+  // Jump every animation to its end state so print() never captures a slide
+  // mid-entrance. Ordering matters: the 0s-transition style must be live
+  // BEFORE data-deck-active is set so attribute-keyed transitions don't
+  // start a (now-0s) run from the pre-active base.
+  const st = document.createElement('style');
+  st.textContent = '*,*::before,*::after{animation-delay:-99s !important;animation-duration:.001s !important;animation-iteration-count:1 !important;animation-fill-mode:both !important;animation-play-state:running !important;transition-duration:0s !important}';
+  document.head.appendChild(st);
+  for (const d of document.querySelectorAll('deck-stage')) {
+    for (const c of d.children) {
+      const t = c.tagName;
+      if (t === 'SCRIPT' || t === 'STYLE' || t === 'TEMPLATE') continue;
+      c.setAttribute('data-deck-active', '');
+    }
+  }
+  // Re-append deck-stage's @page last so no author @page can add a margin and
+  // spill each full-bleed slide onto two sheets. Backstop for old copies.
+  if (ds) {
+    let pg = document.getElementById('deck-stage-print-page');
+    if (!pg) {
+      pg = document.createElement('style');
+      pg.textContent = '@page{size:' + (+ds.getAttribute('width') || 1920) +
+        'px ' + (+ds.getAttribute('height') || 1080) + 'px;margin:0}';
+    }
+    document.body.appendChild(pg);
+  }
+  try {
+    const sweep = () => {
+      for (const a of document.getAnimations()) {
+        try { a.finish(); } catch (e) {
+          try { a.currentTime = (a.effect && a.effect.getComputedTiming().duration) || 0; a.pause(); } catch (e2) {}
+        }
+      }
+    };
+    sweep();
+    await new Promise((r) => requestAnimationFrame(r));
+    sweep();
+    await new Promise((r) => requestAnimationFrame(r));
+  } catch (e) {}
+  // A document that owns its print CSS (the doc-page starter injects the
+  // meta at runtime; hand-rolled print designs author it) gets no automatic
+  // page geometry and keeps its forced breaks: strip the injected default
+  // @page — write time cannot see a runtime-injected meta — skip the frame
+  // override below, and skip the fakepage-flattening further down. What
+  // still applies: the print baseline and break-hygiene defaults (no @page
+  // in either; low specificity, so the document's own print CSS wins) and
+  // the break-inside relaxation on >page elements (avoid on those cannot
+  // be honored whoever authored it).
+  var ownsPrint = !!document.querySelector('meta[name="omelette-owns-print" i]');
+  if (ownsPrint) {
+    var dst = document.querySelector('style[data-omelette-print-defaults]');
+    if (dst && dst.textContent) {
+      dst.textContent = dst.textContent.replace(/@page\b[^{}]*\{[^}]*\}/, '');
+    }
+  }
+  // Size the PDF page to the rendered design unless the file opted into
+  // standard paper via @page{size:letter|A4|…} or declared print ownership
+  // via the meta above. Decks own their own @page.
+  // Wrappers (body, …) lose padding+margin so the frame sits at (0,0); the
+  // frame itself loses only margin — its padding is INSIDE the measured
+  // rect and must stay, or content shifts and leaves a gap at bottom/right.
+  var __m = null;
+  try { __m = (() => {
+  var STAMP = true;
+  var docEl = document.documentElement;
+  var doc = { width: docEl.scrollWidth, height: docEl.scrollHeight };
+  // Name-presence check, case-insensitive — the same contract as the
+  // instant-PDF path's runtime check in deck-stage-export.ts. The name is
+  // a string literal here because that file interpolates this script into
+  // its print script, so importing a shared constant from it would be a
+  // cycle; measure.test.ts pins the literal so the two cannot drift apart
+  // silently.
+  var ownsPrint = !!document.querySelector('meta[name="omelette-owns-print" i]');
+
+  var ds = document.querySelector('deck-stage');
+  if (ds) {
+    var dw = Number(ds.getAttribute('width')) || 1920;
+    var dh = Number(ds.getAttribute('height')) || 1080;
+    var n = typeof ds.length === 'number' ? ds.length : ds.children.length;
+    var idx = typeof ds.index === 'number' ? ds.index : 0;
+    var frames = [];
+    for (var i = 0; i < n; i++) frames.push({ left: 0, top: 0, width: dw, height: dh });
+    return { kind: 'deck', source: 'declared', doc: doc, frames: frames,
+      authored: frames.map(function(){return{width:true,height:true}}),
+      deck: { width: dw, height: dh, slideCount: n, index: idx },
+      signals: { paperPage: false, pxPage: false, ownsPrint: ownsPrint } };
+  }
+
+  // Declared kind: a doc-page tag names the kind outright, so no signal
+  // heuristics run (like the deck branch above, signals report false —
+  // they describe inferred classifications only). The tag alone is not
+  // trusted: the element must have upgraded (shadowRoot present), so a
+  // leftover tag whose script was deleted falls through to the heuristics
+  // that handle plain markup.
+  var stageSx = window.scrollX || 0, stageSy = window.scrollY || 0;
+  var dp = document.querySelector('doc-page');
+  if (dp && dp.shadowRoot) {
+    // Crop to the sheet, not the host — the desk around it is screen-only
+    // chrome that must not land in PNG exports.
+    var sheet = dp.shadowRoot.querySelector('.sheet');
+    var sr = (sheet || dp).getBoundingClientRect();
+    return { kind: 'paper-doc', source: 'declared', doc: doc,
+      frames: [{ left: sr.left + stageSx, top: sr.top + stageSy,
+        width: sr.width, height: sr.height }],
+      authored: [{ width: false, height: false }],
+      signals: { paperPage: false, pxPage: false, ownsPrint: ownsPrint } };
+  }
+  var paperPage = false, pxPage = false;
+  var eachRule = function (fn) {
+    for (var s = 0; s < document.styleSheets.length; s++) {
+      var rs; try { rs = document.styleSheets[s].cssRules; } catch (e) { continue; }
+      for (var r = 0; r < rs.length; r++) {
+        fn(rs[r]);
+        if (rs[r].cssRules) for (var n = 0; n < rs[r].cssRules.length; n++) fn(rs[r].cssRules[n]);
+      }
+    }
+  };
+  eachRule(function (r) {
+    if (r.type !== 6) return;
+    var m = /\bsize\s*:\s*([^;}]+)/i.exec(r.cssText || '');
+    if (!m) return;
+    if (/\b(letter|a[3-5]|legal|ledger)\b/i.test(m[1])) paperPage = true;
+    if (/\d+(?:\.\d+)?px\b/i.test(m[1])) pxPage = true;
+  });
+  var signals = { paperPage: paperPage, pxPage: pxPage, ownsPrint: ownsPrint };
+
+  var pxVal = function (v) {
+    var m = /^(\d+(?:\.\d+)?)px$/.exec(v || ''); return m ? +m[1] : 0;
+  };
+  var authoredPx = function (el, prop) {
+    if (pxVal(el.style[prop])) return true;
+    var attr = el.getAttribute(prop);
+    if (attr && /^\d+$/.test(attr)) return true;
+    var hit = false;
+    eachRule(function (r) {
+      if (hit || r.type !== 1 || !r.style) return;
+      try { if (el.matches(r.selectorText) && pxVal(r.style[prop])) hit = true; } catch (e) {}
+    });
+    return hit;
+  };
+
+  var el = document.body, rootPxW = false;
+  for (;;) {
+    var kids = [];
+    for (var c = 0; c < el.children.length; c++) {
+      var t = el.children[c].tagName;
+      if (t !== 'SCRIPT' && t !== 'STYLE' && t !== 'TEMPLATE') kids.push(el.children[c]);
+    }
+    if (kids.length !== 1 || !(kids[0] instanceof HTMLElement)) break;
+    if (STAMP) el.setAttribute('data-om-frame-wrap', '');
+    el = kids[0];
+    rootPxW = authoredPx(el, 'width');
+    if (rootPxW) break;
+  }
+  if (!rootPxW) rootPxW = authoredPx(el, 'width');
+
+  // @page{size:letter} alone is a flowing doc; with a px-width root it's a
+  // fixed sheet pretending to be paper — fall through and size to render.
+  if (paperPage && !rootPxW) {
+    return { kind: 'paper-doc', source: 'inferred', doc: doc, signals: signals,
+      frames: [{ left: 0, top: 0, width: doc.width, height: doc.height }],
+      authored: [{ width: false, height: false }] };
+  }
+
+  var sx = window.scrollX || 0, sy = window.scrollY || 0;
+  var rectOf = function (e) {
+    var r = e.getBoundingClientRect();
+    var oy; try { oy = getComputedStyle(e).overflowY; } catch (err) {}
+    var h = oy === 'visible' ? Math.max(r.height, e.scrollHeight || 0) : r.height;
+    return { left: r.left + sx, top: r.top + sy, width: r.width, height: h };
+  };
+
+  // Multi-frame: off unless the page opts in via data-om-multi-frame on the
+  // stop element — the explicit opt-in is what guards against card grids
+  // and pricing tables that match the geometry but aren't separate
+  // canvases. Two ways to name the frames, explicit first:
+  // 1. Descendants marked data-om-frame-export (the social-frames starter
+  //    marks each asset frame; shells/panels around them are presentation,
+  //    so nesting is expected). Document order.
+  // 2. Fallback, no marked descendants: direct children with an authored px
+  //    width AND height (the original geometry heuristic).
+  // Frames may be different sizes (a gallery mixes 1080×1920 stories with
+  // 728×90 banners); data-om-frame-label rides along for export filenames.
+  if (el.hasAttribute('data-om-multi-frame')) {
+    var visOk = function (e) {
+      var cs; try { cs = getComputedStyle(e); } catch (err) { return false; }
+      return cs.display !== 'none' && cs.visibility !== 'hidden' && cs.position !== 'fixed';
+    };
+    // A frame's crop is its VISUAL box — never the scrollHeight-inflated
+    // rect that rectOf computes for page roots. Shadow-DOM hover controls
+    // (image-slot's Replace bar parks 29px below its host) and similar
+    // escaping UI contribute scrollable overflow to the frame, and the
+    // inflated height both squashes the nominal-size resize and drags
+    // content below the frame into the crop. Zoom-independent; bit every
+    // slot-bearing frame.
+    var frameRectOf = function (e) {
+      var r = e.getBoundingClientRect();
+      return { left: r.left + sx, top: r.top + sy, width: r.width, height: r.height };
+    };
+    var pushCand = function (list, e) {
+      if (!visOk(e)) return;
+      var rc = frameRectOf(e);
+      if (rc.width < 2 || rc.height < 2) return;
+      var lbl = e.getAttribute('data-om-frame-label');
+      if (lbl) rc.label = lbl;
+      list.push(rc);
+    };
+    var cands = [];
+    var marked = el.querySelectorAll('[data-om-frame-export]');
+    if (marked.length) {
+      for (var mk = 0; mk < marked.length; mk++) pushCand(cands, marked[mk]);
+    } else {
+      for (var k = 0; k < el.children.length; k++) {
+        var ch = el.children[k];
+        if (!authoredPx(ch, 'width') || !authoredPx(ch, 'height')) continue;
+        pushCand(cands, ch);
+      }
+    }
+    if (cands.length >= 2) {
+      return { kind: 'multi-frame', source: 'inferred', doc: doc, signals: signals,
+        frames: cands, authored: cands.map(function(){return{width:true,height:true}}) };
+    }
+  }
+
+  if (STAMP) el.setAttribute('data-om-frame', '');
+  return { kind: 'single-canvas', source: 'inferred', doc: doc, signals: signals,
+    frames: [rectOf(el)],
+    authored: [{ width: rootPxW, height: authoredPx(el, 'height') }] };
+})(); } catch (e) {}
+  var frame = null;
+  if (!ownsPrint && __m && __m.kind === 'single-canvas') {
+    var f = __m.frames && __m.frames[0];
+    if (f && f.width >= 200 && f.height >= 200) {
+      frame = f;
+      var fst = document.createElement('style');
+      fst.textContent = '@media print{@page{size:' + Math.ceil(f.width) + 'px ' +
+        Math.ceil(f.height) + 'px;margin:0}' +
+        'html,body,[data-om-frame-wrap]{padding:0!important;margin:0!important;background:none!important}' +
+        '[data-om-frame]{margin:0!important}}';
+      document.body.appendChild(fst);
+    }
+  }
+  // Relax break-inside on oversized elements. An element taller than a
+  // printable page can't honor break-inside: avoid — browsers either overflow
+  // it or push it whole to the next page, leaving a blank gap, then break it
+  // anyway at an arbitrary point. After the final layout (content revealed,
+  // animations jumped), find elements taller than a page that still compute
+  // break-inside: avoid and reset them to auto, so the browser breaks them at
+  // their children's boundaries instead (children keep their own avoid). PAGE_PX
+  // is a conservative portrait estimate at 96 CSS px/in — Letter/A4 usable
+  // height minus our 0.5in margins — so only clearly-oversized elements are
+  // touched and under-page elements still stay whole. Skipped for decks (slides
+  // are sized to the page) and for fixed-size canvases (frame set, or an author
+  // px-based @page) — runs as before for flowing docs on letter/A4.
+  try {
+    if (!ds && !frame && !(__m && __m.signals && __m.signals.pxPage)) {
+      const PAGE_PX = 1024;
+      // Our print defaults add a real @page margin only when the source has
+      // no @page of its own; computed style can't tell us (it reports screen
+      // media), so read the injected rule directly.
+      const defaults = document.querySelector('style[data-omelette-print-defaults]');
+      const pageInset = /@page\s*\{[^}]*margin/.test(defaults ? defaults.textContent || '' : '');
+      const SEL = 'section,article,figure,table,pre,blockquote,[class~="card" i],[class~="page" i],[class~="sheet" i]';
+      for (const el of document.body.querySelectorAll(SEL)) {
+        if (el instanceof HTMLElement && el.offsetHeight > PAGE_PX) {
+          el.setAttribute('data-om-oversized', '');
+          // Fake-paged docs simulate sheets with over-tall break-after:page
+          // boxes; honoring the break spills half-blank pages and ends a
+          // colored box mid-sheet. Flow them, and (only when we own the page
+          // inset) drop the redundant padding/background via the rule below.
+          const cs = getComputedStyle(el);
+          // An owns-print doc's forced breaks are intentional sheet
+          // boundaries, never fake-paged simulation — don't strip them.
+          // The break-inside relaxation above still applies: avoid on a
+          // >page element is impossible to honor whoever authored it.
+          if (
+            !ownsPrint &&
+            (cs.breakAfter === 'page' || cs.pageBreakAfter === 'always')
+          ) {
+            el.setAttribute('data-om-fakepage', '');
+          }
+        }
+      }
+      const ost = document.createElement('style');
+      ost.textContent = '@media print{' +
+        '[data-om-oversized]{break-inside:auto !important;page-break-inside:auto !important}' +
+        '[data-om-fakepage]{break-after:auto !important;page-break-after:auto !important}' +
+        (pageInset ? '[data-om-fakepage]{padding:0 !important;background:none !important}' : '') +
+        '}';
+      document.head.appendChild(ost);
+    }
+  } catch (e) {}
+  // macOS Preview renders Skia-PDF Luminosity soft-masks as opaque grey boxes;
+  // swap the CSS that triggers them for Preview-safe forms.
+  try {
+    for (const el of document.body.querySelectorAll('*')) {
+      const cs = getComputedStyle(el);
+
+      if (cs.boxShadow !== 'none' && cs.filter === 'none') {
+        const outs = [], kept = [];
+        for (const s of cs.boxShadow.split(/,(?![^(]*[)])/)) {
+          const t = s.trim();
+          const m = t.match(/^(rgba?[(][^)]+[)]) (-?[0-9.]+px) (-?[0-9.]+px) ([0-9.]+px) -?[0-9.]+px$/);
+          if (m && parseFloat(m[4]) > 0) outs.push('drop-shadow(' + m[2] + ' ' + m[3] + ' ' + m[4] + ' ' + m[1] + ')');
+          else kept.push(t);
+        }
+        if (outs.length) {
+          el.style.setProperty('filter', outs.join(' '), 'important');
+          el.style.setProperty('box-shadow', kept.join(', ') || 'none', 'important');
+        }
+      }
+
+      const mask = cs.maskImage && cs.maskImage !== 'none' ? cs.maskImage : cs.webkitMaskImage;
+      if (mask && mask !== 'none' && cs.filter === 'none') el.style.setProperty('filter', 'opacity(1)', 'important');
+    }
+  } catch (e) {}
+  setTimeout(() => { try { window.print(); } catch (e) {} }, 200);
+})();
+</script>
+</body>
+</html>
