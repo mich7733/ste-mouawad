@@ -13,23 +13,29 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=Dancing+Script:wght@600;700&family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700;800&family=Aref+Ruqaa:wght@400;700&display=swap">
 <link rel="stylesheet" href="_ds/modernist-2380c6d5-0125-4329-9a8e-5f74083e9614/styles.css">
 <script src="_ds/modernist-2380c6d5-0125-4329-9a8e-5f74083e9614/_ds_bundle.js"></script>
+<title>STE. MOUAWAD — Entreprise Artistique | Marble & Stone Artistry Since 1967</title>
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
 <style>
-  html,body{margin:0;background:#f6f2ec;overflow-x:hidden;max-width:100%}
+  html{overflow-x:clip}
+  body{margin:0;background:#f6f2ec}
   a{color:inherit}
   ::selection{background:rgba(168,50,31,.18)}
   img{max-width:100%}
   .brand-logo{flex:0 0 auto}
+  .ar-mode *{letter-spacing:normal !important}
+  .ig-tile{width:100%;aspect-ratio:1;overflow:hidden}
   @media (max-width:768px){
+    .ig-feed{grid-template-columns:1fr 1fr !important}
     .nav-links{display:none !important}
     .nav-bar{padding:14px 16px !important;gap:10px !important}
     .nav-actions{gap:10px !important}
-    .brand-logo{height:32px !important}
-    .brand-ar{font-size:24px !important}
+    .brand-logo{height:30px !important}
     .lang-btn{padding:6px 10px !important;font-size:12px !important}
     .wa-btn{padding:9px 11px !important;gap:0 !important}
     .wa-label{display:none !important}
-    .hero-sec{min-height:82vh !important}
-    .hero-inner{padding:36px 20px 52px !important}
+    .hero-sec{min-height:500px !important}
+    .hero-inner{padding:30px 20px 38px !important}
     .sec{padding-left:20px !important;padding-right:20px !important;padding-top:58px !important;padding-bottom:58px !important}
     .about-grid{grid-template-columns:1fr !important;gap:28px !important}
     .about-grid>div:first-child{aspect-ratio:1.25 !important}
@@ -84,8 +90,8 @@
 </script>
 </helmet>
 
-<div style="{{ rootStyle }}">
-<div style="background:#f6f2ec;color:#2a2320;font-family:var(--font-body,'Source Serif 4',Georgia,serif);overflow-x:hidden">
+<div class="{{ rootClass }}" style="{{ rootStyle }}">
+<div style="background:#f6f2ec;color:#2a2320;font-family:var(--font-body,'Source Serif 4',Georgia,serif);overflow-x:clip">
 
 <template id="__bundler_thumbnail" data-bg-color="#1a1410">
   <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
@@ -99,7 +105,7 @@
 </template>
 
 <!-- ============ HERO ============ -->
-<section class="hero-sec" style="position:relative;overflow:hidden;background:#1a1410;min-height:770px;display:flex;flex-direction:column">
+<section class="hero-sec" style="position:relative;overflow:hidden;background:#1a1410;min-height:600px;display:flex;flex-direction:column">
   <div data-parallax="0.22" style="position:absolute;inset:0;background:url(assets/hero.jpg) center 40%/cover;transform:scale(1.15);will-change:transform"></div>
   <div style="position:absolute;inset:0;background:linear-gradient(var(--grad,90deg),rgba(16,11,8,.92),rgba(16,11,8,.6) 52%,rgba(16,11,8,.34));pointer-events:none"></div>
   <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(16,11,8,.72),transparent 46%);pointer-events:none"></div>
@@ -107,8 +113,7 @@
   <!-- nav -->
   <header class="nav-bar" style="position:relative;z-index:3;width:100%;max-width:1200px;margin:0 auto;padding:26px 34px;box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:24px">
     <a href="#top" style="display:flex;align-items:center;text-decoration:none">
-      <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}"><img class="brand-logo" src="assets/logo-white.png" alt="STE. MOUAWAD — Entreprise Artistique" style="height:50px;width:auto;display:block"></img></sc-if>
-      <sc-if value="{{ isAr }}"><span class="brand-ar" style="font-family:'Amiri',serif;font-weight:700;font-size:30px;color:#fbf6ee;letter-spacing:.02em;white-space:nowrap">شركة معوض</span></sc-if>
+      <img class="brand-logo" src="assets/logo-white.png" alt="STE. MOUAWAD — Entreprise Artistique" style="height:48px;width:auto;display:block"></img>
     </a>
     <div class="nav-actions" style="display:flex;align-items:center;gap:26px">
       <nav class="nav-links" style="display:flex;align-items:center;gap:24px;font-family:var(--font-nav,'Source Serif 4',serif);font-size:14px;letter-spacing:.02em;color:#efe6da">
@@ -127,7 +132,7 @@
   </header>
 
   <!-- hero content -->
-  <div class="hero-inner" style="position:relative;z-index:2;width:100%;max-width:1200px;margin:0 auto;padding:64px 34px 76px;box-sizing:border-box;display:flex;flex-direction:column;align-items:flex-start;gap:22px;text-align:start;flex:1;justify-content:center">
+  <div class="hero-inner" style="position:relative;z-index:2;width:100%;max-width:1200px;margin:0 auto;padding:44px 34px 52px;box-sizing:border-box;display:flex;flex-direction:column;align-items:flex-start;gap:20px;text-align:start;flex:1;justify-content:center">
     <span style="font-family:var(--font-nav,'Source Serif 4',serif);font-size:13px;letter-spacing:.24em;text-transform:var(--upper,uppercase);color:#d9b877;font-weight:600">{{ t.heroKicker }}</span>
     <h1 style="margin:0;font-family:var(--font-head,'Playfair Display',serif);font-weight:800;color:#fff;font-size:clamp(42px,5.4vw,66px);line-height:1.12;max-width:640px;letter-spacing:-.01em">{{ t.heroTitle }}</h1>
     <p style="margin:0;max-width:440px;color:rgba(255,255,255,.86);font-size:18px;line-height:1.6">{{ t.heroSub }}</p>
@@ -227,8 +232,8 @@
 
 <!-- ============ INSTAGRAM ============ -->
 <section class="sec" style="background:#efe8dc;padding:64px 34px">
-  <div class="ig-grid" style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.7fr 1fr;gap:44px;align-items:center">
-    <div style="text-align:start">
+  <div style="max-width:1180px;margin:0 auto">
+    <div style="text-align:start;max-width:640px;margin-bottom:34px">
       <h2 style="margin:0 0 14px;font-family:var(--font-head,'Playfair Display',serif);font-weight:700;font-size:clamp(24px,2.4vw,30px);line-height:1.15;color:#241d18;text-transform:var(--upper,uppercase)">{{ t.igTitle }}</h2>
       <p style="margin:0 0 22px;font-size:15px;line-height:1.6;color:#5a4e44">{{ t.igCopy }}</p>
       <a href="https://instagram.com/ste.mouawad" target="_blank" style="display:inline-flex;align-items:center;gap:9px;background:var(--wine,#9c2b1c);color:#fff;text-decoration:none;padding:12px 20px;font-family:var(--font-nav,'Source Serif 4',serif);font-weight:600;font-size:12px;letter-spacing:.1em;text-transform:var(--upper,uppercase)" style-hover="background:#83231a">
@@ -236,12 +241,12 @@
         {{ t.igBtn }}
       </a>
     </div>
-    <a href="https://instagram.com/ste.mouawad" target="_blank" style="text-decoration:none;border:1px solid rgba(0,0,0,.14);padding:26px 18px;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;color:#241d18" style-hover="background:rgba(0,0,0,.03)">
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="2.5" width="19" height="19" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"></circle></svg>
-      <span style="font-family:var(--font-nav,'Source Serif 4',serif);font-weight:600;font-size:14px">{{ t.igHandle }}</span>
-      <span style="font-size:12px;color:#6b5d52">{{ t.igFollow }}</span>
-      <span style="color:var(--accent,#a8321f);transform:var(--arrow-flip,none);margin-top:2px"><svg width="26" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
-    </a>
+    <div class="ig-feed" style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:980px;margin:0 auto">
+      <a href="https://www.instagram.com/p/4HpvLMPLVK/" target="_blank" class="ig-tile" style="display:block;text-decoration:none;background-image:url(assets/ig_1.png);background-size:cover;background-position:center;background-color:#e0d6c8"></a>
+      <a href="https://www.instagram.com/p/DRCBB9HDYb4/" target="_blank" class="ig-tile" style="display:block;text-decoration:none;background-image:url(assets/ig_2.png);background-size:cover;background-position:center;background-color:#e0d6c8"></a>
+      <a href="https://www.instagram.com/p/DaYVdVMjJB2/" target="_blank" class="ig-tile" style="display:block;text-decoration:none;background-image:url(assets/ig_3.png);background-size:cover;background-position:center;background-color:#e0d6c8"></a>
+      <a href="https://www.instagram.com/p/DYe_Q3QIu5c/" target="_blank" class="ig-tile" style="display:block;text-decoration:none;background-image:url(assets/ig_4.png);background-size:cover;background-position:center;background-color:#e0d6c8"></a>
+    </div>
   </div>
 </section>
 
@@ -323,7 +328,7 @@ class Component extends DCLogic {
       nav1: 'Our Story', nav2: 'Projects', nav3: 'Instagram', nav4: 'Facebook', nav5: 'Contact',
       waBtn: 'WhatsApp Us', langBtn: 'عربي',
       heroKicker: 'More than five decades of craft',
-      heroTitle: 'Crafting Sacred Spaces Since 1967',
+      heroTitle: 'Crafting Spaces Since 1967',
       heroSub: 'From design to execution, transforming natural stone into timeless works of art.',
       heroCta1: 'View Our Work', heroCta2: 'WhatsApp Us', igWord: 'Instagram', fbWord: 'Facebook',
       aboutKicker: 'A Legacy of Faith & Artistry',
@@ -337,7 +342,7 @@ class Component extends DCLogic {
       proc1: 'Design', proc2: 'Technical Drawings', proc3: 'Stone Selection', proc4: 'Craftsmanship', proc5: 'Installation',
       igTitle: 'Follow Our Latest Work',
       igCopy: 'Discover our recent projects, craftsmanship and behind-the-scenes moments.',
-      igBtn: 'View Instagram', igHandle: '@ste.mouawad', igFollow: 'Follow on Instagram',
+      igBtn: 'View Instagram', igHandle: '@ste.mouawad', igFollow: 'Follow on Instagram', igView: 'View on Instagram',
       stat1k: 'Since', stat1v: 'Since 1967', stat1s: 'Over 55 years of excellence',
       stat2v: 'Hundreds', stat2s: 'Of completed projects',
       stat3v: 'Across Lebanon', stat3s: 'And beyond',
@@ -352,21 +357,21 @@ class Component extends DCLogic {
       nav1: 'من نحن', nav2: 'أعمالنا', nav3: 'انستغرام', nav4: 'فيسبوك', nav5: 'تواصل معنا',
       waBtn: 'تواصل عبر واتساب', langBtn: 'EN',
       heroKicker: 'نحو أكثر من خمسة عقود من الإبداع',
-      heroTitle: 'نحوّل الحجر إلى تحف فنية تخلّد الإيمان',
+      heroTitle: 'نحوّل الحجر إلى تحف فنية خالدة',
       heroSub: 'من التصميم إلى التنفيذ، نحوّل الحجر الطبيعي إلى أعمال فنية خالدة منذ عام ١٩٦٧',
       heroCta1: 'استكشف أعمالنا', heroCta2: 'تواصل عبر واتساب', igWord: 'انستغرام', fbWord: 'فيسبوك',
       aboutKicker: 'إرث عائلي من الإيمان والفن',
       aboutTitle: 'حكاية عائلة صنعت التاريخ بالحجر',
       aboutP1: 'منذ عام ١٩٦٧، تتخصص شركة معوض في تصميم وتنفيذ الكنائس، المذابح، المنحوتات، المواقد، والأعمال الرخامية المخصصة في لبنان وخارجه.',
       aboutP2: 'كل مشروع هو مزيج من الرؤية الفنية، الخبرة التقنية، والحرفية المتوارثة عبر الأجيال.',
-      aboutSig: 'ستـ. معوض',
+      aboutSig: 'شركة معوض',
       featTitle: 'نماذج من أعمالنا', featMore: 'عرض المزيد من الأعمال',
       filter_all: 'الكل', filter_churches: 'الكنائس', filter_altars: 'المذابح', filter_sculptures: 'المنحوتات', filter_fireplaces: 'المواقد والديكورات',
       procTitle: 'من الفكرة إلى التنفيذ',
       proc1: 'التصميم', proc2: 'الرسومات التنفيذية', proc3: 'اختيار الحجر', proc4: 'الحرفية اليدوية', proc5: 'التركيب في الموقع',
       igTitle: 'تابعوا أحدث أعمالنا',
       igCopy: 'لحظات من الورشة، تفاصيل فنية، ومشاريع نعتز بتنفيذها.',
-      igBtn: 'زيارة انستغرام', igHandle: '@ste.mouawad', igFollow: 'تابعونا على انستغرام',
+      igBtn: 'زيارة انستغرام', igHandle: '@ste.mouawad', igFollow: 'تابعونا على انستغرام', igView: 'مشاهدة على انستغرام',
       stat1k: 'منذ', stat1v: 'منذ ١٩٦٧', stat1s: '',
       stat2v: 'مئات المشاريع المنجزة', stat2s: '',
       stat3v: 'في مختلف أنحاء لبنان وخارجه', stat3s: '',
@@ -382,7 +387,7 @@ class Component extends DCLogic {
       direction: isAr ? 'rtl' : 'ltr',
       '--accent': accent,
       '--wine': wine,
-      '--font-head': isAr ? "'Amiri', serif" : "'Playfair Display', Georgia, serif",
+      '--font-head': isAr ? "'Cairo', sans-serif" : "'Playfair Display', Georgia, serif",
       '--font-body': isAr ? "'Cairo', sans-serif" : "'Source Serif 4', Georgia, serif",
       '--font-sig': isAr ? "'Aref Ruqaa', serif" : "'Dancing Script', cursive",
       '--font-nav': isAr ? "'Cairo', sans-serif" : "'Source Serif 4', Georgia, serif",
@@ -431,10 +436,9 @@ class Component extends DCLogic {
       };
     });
 
-    const igTiles = [1, 2, 3, 4, 5].map(i => ({ id: 'ig_' + i, ph: t.phIg }));
-
     return {
-      t, rootStyle, projects, filters, igTiles,
+      t, rootStyle, projects, filters,
+      rootClass: isAr ? 'ar-mode' : '',
       isEn: !isAr, isAr: isAr,
       langBtn: t.langBtn,
       toggleLang: () => this.setState(s => ({ lang: s.lang === 'ar' ? 'en' : 'ar' }))
