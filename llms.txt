@@ -1,6 +1,6 @@
 # STE. MOUAWAD — Entreprise Artistique (شركة معوض للأعمال الفنية)
 
-> Family-run Lebanese workshop crafting custom marble and natural stone since 1967: church interiors, altars, fireplaces, columns, balusters, sculpture, fountains and hand-carved details. Based in Mazraat Yachouh, Metn, Mount Lebanon. Works across Lebanon and beyond.
+> Family-run Lebanese workshop hand-crafting all kinds of stonework in marble and natural stone since 1967: church interiors, altars, fireplaces, columns, balusters, sculpture, fountains and hand-carved details. Based in Mazraat Yachouh, Metn, Mount Lebanon. Works across Lebanon and beyond.
 
 ## About
 - Founded: 1967; still family-run today
@@ -11,6 +11,7 @@
 - Languages: Arabic, English, French
 
 ## What they make
+All kinds of handcrafted stonework, including:
 - Church interiors: sanctuaries, niches and complete interior stonework for new churches and restorations
 - Altars and devotional pieces: carved altars, tabernacles and devotional elements
 - Fireplaces: classic carved mantels to minimalist modern surrounds, made to measure
