@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://stemouawad.com/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stemouawad.com/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://stemouawad.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stemouawad.com/"/>
+  </url>
+  <url>
+    <loc>https://stemouawad.com/ar/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stemouawad.com/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://stemouawad.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stemouawad.com/"/>
+  </url>
+</urlset>
